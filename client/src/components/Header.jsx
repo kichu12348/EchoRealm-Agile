@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 import { FaUserCircle } from "react-icons/fa";
+import chat from "./svgs/chat.svg";
 
-const Header = () => {
+const Header = ({ setIsChatsOpen }) => {
   const { user, logout } = useContext(UserContext);
   const [userDetails, setUserDetails] = useState({});
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Header = () => {
   }, [user]);
 
   return (
-    <header className="bg-gray-800">
+    <header className="bg-gray-800 mb-3">
       <div className="flex items-center justify-between px-8 py-2">
         <Link to="/" className="flex flex-row items-center">
           <img src="/EchoRealm.svg" className="lg:size-10 size-6" alt="" />
@@ -25,6 +26,20 @@ const Header = () => {
         </Link>
         <nav>
           <ul className="flex space-x-4 items-center">
+            <li>
+              <img
+                src={chat}
+                alt="Chat Icon"
+                className="size-10"
+                style={{
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  setIsChatsOpen((prev) => !prev);
+                }}
+              />
+            </li>
+
             <li>
               <Link
                 to="/profile"

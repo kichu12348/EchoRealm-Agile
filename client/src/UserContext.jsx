@@ -5,7 +5,7 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = "http://localhost:8080";
 
   useEffect(() => {
     const userData = localStorage.getItem("user");
