@@ -1,7 +1,7 @@
 # Echo Realm
 
 Echo Realm is a social media platform that allows users to forge connections, share opinions, and engage in polls with strangers. The platform embraces anonymity and sparks meaningful conversations without the need for direct messaging.
-
+not my project this belongs to https://github.com/nandhu-44
 ## Features
 
 - **Forge Connections:** Connect with people from all over the world.
